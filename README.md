@@ -1,1 +1,1 @@
-# project-zomboid-dedicated-server
+# Project Zomboid Dedicated Server
