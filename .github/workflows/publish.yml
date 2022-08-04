@@ -5,6 +5,7 @@ on:
 
 jobs:
   docker:
+    name: Publish to DockerHub
     runs-on: ubuntu-latest
     steps:
       - name: Login to DockerHub
@@ -17,4 +18,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: user/app:latest
+          tags: mradamh/project-zomboid-dedicated-server:latest
