@@ -1,6 +1,3 @@
-.gitignore
-.github
-README.md
-docker-compose.yml
-pzserver
-pzdata
+*
+!Dockerfile
+!entrypoint.sh
