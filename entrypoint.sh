@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
-"${STEAMCMDDIR}/steamcmd.sh" \
+# Update
+steamcmd \
     +force_install_dir /opt/pzserver \
     +login anonymous \
-    +app_update 380870 validate \
+    +app_update 380870 \
     +quit
 
+# Start
 /opt/pzserver/start-server.sh \
     -cachedir=/opt/pzdata \
     -adminusername "$ADMIN_USERNAME" \

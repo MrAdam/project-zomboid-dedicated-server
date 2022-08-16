@@ -1,11 +1,12 @@
-FROM cm2network/steamcmd
+FROM steamcmd/steamcmd:latest
 
-ENV SERVER_NAME "ZomboidServer"
-ENV ADMIN_USERNAME "pzserver"
-ENV ADMIN_PASSWORD "pzserver"
+ENV SERVER_NAME=pzserver
+ENV ADMIN_USERNAME=pzuser
+ENV ADMIN_PASSWORD=pzuser
 
 COPY entrypoint.sh "${HOMEDIR}/entrypoint.sh"
 ENTRYPOINT ${HOMEDIR}/entrypoint.sh
 
-EXPOSE 8766/udp
-EXPOSE 16261/udp
+VOLUME [ "/opt/pzserver", "/opt/pzdata" ]
+
+EXPOSE 8766/udp 16261/udp
